@@ -151,182 +151,312 @@ body.admin-panel .tbl1 td, body.admin-panel .tbl1 th {
 </nav>
 
 <div id="container">
-    <div class="index-header animasion">
-	<div class="wave wave1"></div>
-	<div class="wave wave2"></div>
-	<div class="wave wave3"></div>
-	<div class="wave wave4"></div>
-	<div class="container">
-		<div class="col-md-12 text-center">
-			<h1 class="title mb-3" style="font-weight:500!important; margin-bottom:0.5rem !important">The ultimate Sharing solution</h1>
-			<p class="subtitle mb-5" style="font-weight:500!important; color:#c1d9f8; font-size:1.2rem; font-weight:700!important;">Upload, share and manage your files, It's FREE & always will be</p>
-			<div class="d-flex align-items-center flex-wrap justify-content-center mt-5">
-				<!--
-					<a href="/register.html" class="btn btn-white">Register Now</a>
-				
-				<span class="or-action d-block d-md-inline-block mx-md-3">or</span>-->
-				<a href="index.html@op=upload_form" class="btn btn-secondary mb-0" style="z-index:1000;">START UPLOADING NOW</a>
-			</div>
-		</div>
-	</div>
-</div>
+    
 
-<div class="features my-5 py-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 mb-5 text-center">
-				<h2 class="title">Get access to all of your files needed</h2>
-				<h4 class="mb-0 subtext text-center">
-					We supply you with all the tools necessary to easily share your files. Use our pre-generated html code to link onto your website or use our direct Link and share to Facebook, Twitter etc.
-				</h4>
-			</div>
-			<div class="col-md-12">
-				<div class="col-sm-3 fEach text-center">
-					<div class="eachInner">
-						<i class="fal fa-hdd"></i>
-						<strong>100 GB free storage</strong>
-						<p>Our free users benefit from 100GB free storage for all of their files. Premium users can access upto unlimited storage.
-</p>
-					</div>
-				</div>
-				<div class="col-sm-3 fEach text-center">
-					<div class="eachInner">
-						<i class="fal fa-upload"></i>
-						<strong>Unlimited file uploads</strong>
-						<p>Upload unlimted files and unlike other file hosts we don't limit the transfer speed of our uploads.</p>
-					</div>
-				</div>
-				<div class="col-sm-3 fEach text-center">
-					<div class="eachInner">
-						<i class="fal fa-download"></i>
-						<strong>Unlimited download</strong>
-						<p>Download as much as you would like without limitations.</p>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</div>
+<script>
+	$('body').addClass('index-page');
+</script>
 
-<div class="site-stats p-5" style="padding:3rem!important">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="section">
-					<i class="fal fa-clone"></i>
-					<p class="mb-0"><strong>2,000,000 +</strong> <br />Files</p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="section">
-					<i class="fal fa-server"></i>
-					<p class="mb-0"><strong>1543 TB +</strong> <br />Disk Used</p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="section">
-					<i class="fal fa-user-friends"></i>
-					<p class="mb-0"><strong>50,000 +</strong> <br />Users</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
-<div class="get-started py-5">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="title text-center mb-4">What are you waiting for?</h2>
-				<p class="mb-0 text-center">Join us now for free and we promise that you'll never regret it.</p>
-			</div>
-			<div class="col-md-12 text-center">
-				<a href="register.html" class="my-4 btn btn-blue">JOIN US NOW</a>
-			</div>
-		</div>
-	</div>
-</div>
-<style type="text/css">
-.animasion {
-    position: relative;
+
+<style>
+.progressbar-filenames b {
+    padding: 3px;
+    background: #041c32;
+    border-radius: 4px;
+    display: inline;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-container .upload-form .upload-file #files_list li .information h4, .upload-list li .info h4 {
+    color: #3586ff;
     width: 100%;
-    height: 80vh! important;
-    background: #3586ff;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
-    z-index: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    padding-bottom: 265px;
+    min-height: 100%;
+    background-color: #041C32 !important;
+ -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none; 
+user-select: none !important;
+-webkit-user-drag: none !important;
+
+} 
+.footer .menu li a {
+    display: block;
+    padding: 6px 0;
+    font-size: .75rem;
+    color: #abb2b9;
+    -webkit-user-drag: none;
 }
 
-.footer{bottom:0;}
-@media all and (max-width:786px){.footer{bottom: auto;}}
-.animasion{
-  position:relative;
-  width:100%;
-  height:100vh;
-  background:#3586ff;
-  overflow:hidden;
-  z-index:0;
+.form-control, .form-group table tbody tr td input[type=text] {
+    border-radius: 6px;
 }
-.animasion .wave{
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:100px;
-background:url('https://media.discordapp.net/attachments/640536664984256523/694777270744907806/wave.png');
-  background-size:1000px 100px;
-}
-.animasion .wave.wave1{
-  animation:animate 30s linear infinite;
-  z-index:1000;
-  opacity:1;
-  animation-delay:0s;
-  bottom: 0;
-}
-.animasion .wave.wave2{
-  animation:animate2 15s linear infinite;
-  z-index:999;
-  opacity:0.5;
-  animation-delay:-5s;
-  bottom: 10px;
-}
-.animasion .wave.wave3{
-  animation:animate 30s linear infinite;
-  z-index:998;
-  opacity:0.2;
-  animation-delay:-2s;
-  bottom: 15px;
-}
-.animasion .wave.wave4{
-  animation:animate2 5s linear infinite;
-  z-index:997;
-  opacity:0.7;
-  animation-delay:-5s;
-  bottom: 20px;
-}
-@keyframes animate{
-  0%{
-    background-position-x: 0;
-  }
-  100%{
-    background-position-x: 1000px;
-  }
-}
-@keyframes animate2{
-  0%{
-    background-position-x: 0;
-  }
-  100%{
-    background-position-x: -1000px;
-  }
+.navbar .navbar-nav .nav-item .nav-link {
+    text-transform: uppercase;
+    color: #dce8f5;
+    font-size: .8571428571428571rem;
+    font-weight: 500;
+    -webkit-user-drag: none;
 }
 
-.col-sm-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 33%;
+.btn.btn-default {
+    background: #3080e8;
+    color: white;
+    border-radius: 6px;
+}
+
+.upload-container .upload-form .upload-file #files_list li {
+    margin: 0 0 20px;
+    padding: 15px;
+    border-radius: 6px;
+    border-bottom: 2px solid #3586ff;
+    background: #041c32;
+}
+
+.btn.btn-default.active, .btn.btn-default:active, .btn.btn-default:focus, .btn.btn-default:hover, .btn.btn-default:not(:disabled):active, .btn.btn-default:visited {
+    background: #58a3fd;
+    cursor: pointer !important;
+}
+
+.bg-white {
+    background-color: #18334b!important;
+    border-radius: 6px !important;
+}
+.upload-container .upload-form .browse p {
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+.form-group label {
+    color: #ffffff;
+}
+
+.btn.btn-primary {
+    background: #58a3fd;
+    border-radius: 6px;
+}
+
+.upload-container .section .tabs li { 
+    left: 100px;
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    font-family: 'Noto Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 11px 23px;
+    background: #f4f4f4;
+    color: #777777;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.upload-container .section .box {
+    max-width: 100%;
+    display: none;
+    margin-bottom: 10rem;
+    box-shadow: 0 0.5625rem 2.8125rem 0 rgb(35 69 152 / 15%); 
+    background: #18334b;
+    border-radius: 6px;
+    min-height: 380px;
+}
+
+.upload-container .upload-form .browse p label {
+    font-weight: 600;
+    cursor: pointer;
+    background: #3080e8;
+    color: white;
+    border-radius: 4px;
+    padding: 10px !important;
+}
+
+.upload-container .upload-form .browse p label:focus, .upload-container .upload-form .browse p label:hover {
+    color: #ffd6d6;
+    background: #2670d0;
+}
+
+
+.ico_upload {
+    height: 255px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 215px;
+    margin: auto;
+    background-image: url("https://onlyfiles.co/img/uploadH.png") repeat !important;
 }
 </style>
+
+<link href="https://code.jquery.com/ui/1.11.2/themes/cupertino/jquery-ui.css" type="text/css" rel="stylesheet" />
+<script src="xfst_theme2/js/jquery-ui.js"></script>
+<script src="xfst_theme2/js/upload.js"></script>
+
+<script src="xfst_theme2/js/dragndrop.js"></script>
+<script src="xfst_theme2/js/multiselector.js@v=1"></script>
+<style>
+.col-sm-8 {max-width: 100% !important;flex: 0 0 100% !important;}
+/*.col-md-8 {max-width: 100% !important;flex: 0 0 100% !important;}*/
+.bg-white {margin-bottom:0px;}
+</style>
+<div class="upload-container" id="upload">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section">
+					<ul class="tabs col-md-8">
+						<li id="select_file" class="current">File upload</li>
+						<li id="select_url">Remote URL upload</li>
+						<li id="select_copy">Copy files</li>
+						
+						
+					</ul>
+					<div class="uploadtab box visible" id="file_upload">
+						<form id="uploadfile" action="https://onlyfs600.uploadhub.to:83/cgi-bin/data4/upload.cgi?upload_type=file&utype=anon" class="upload-form bg-white position-relative">
+							<input type="hidden" name="sess_id" value="">
+							<input type="hidden" name="utype" value="anon">
+
+							<div class="browse p-5 col-md-12 text-center" id="dropzone">
+								<input type="file" class="d-none" id="file_0" multiple>
+								<div class="ico_upload"></div>
+								<p class="mt-4 mb-0">Drag and drop or <label class="ml-2" for="file_0">select files</label></p>
+							</div>
+
+							<div class="upload-file d-none flex-wrap p-3">
+								<div class="progress_div"></div>
+								<div class="col-md-8">
+									<ul id="files_list"></ul>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label>Recipient's Email</label>
+										<input type="text" name="link_rcpt" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Link Password</label>
+										<input type="text" name="link_pass" class="form-control" >
+									</div>
+									<div class="form-group">
+										<label>Upload to folder</label>
+										<select name="to_folder" class="form-control">
+											<option value="">--</option>
+											<option value="0"> / </option>
+											
+										</select>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>					
+
+					<div class="box" id="url_upload">
+						
+								<p class="p-4"><a href="register">Register on site</a><br>to use Remote URL upload</p>
+						
+						<div class="clear"></div>
+					</div> <!-- End Remote URL Upload Tab -->
+					<div class="box" id="copy_upload"> <!-- Start Copy Files Tab -->
+						<div class="tabcontent p-4">
+							<div class="copyfiles">
+								<form method="post" action="index.html@op=upload_form" onsubmit="if(!this.tos.checked){ alert('You must agree with TOS'); return(false); }">
+									<input type="hidden" name="op" value="my_files">
+									<input type="hidden" name="add_my_acc" value="1">
+									<input type="hidden" name="token" value="a32a0adfb7e720850249b443c4a9f48c">
+									<textarea name="url_mass" class="form-control" rows="8"></textarea>
+
+									<div class="d-flex flex-wrap justify-content-between align-items-center pt-4">
+										<div class="custom-control custom-checkbox mr-4">
+											<input type="checkbox" id="tosc" name="tos" value="" class="custom-control-input" checked>
+											<label for="tosc" class="custom-control-label">I have read and agree to the <a href="tos.html" target="_blank">TOS</a></label>
+										</div>
+										<button class="btn btn-primary uploadbtn">Upload</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div> <!-- End Copy Files Tab -->
+
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	var urluploader = new URLUploader('.reurlupload form', '.reurlupload .progress_div', {
+		return_url: 'https://uploadhub.to/?op=upload_result&',
+		tmp_url: 'https://onlyfs600.uploadhub.to:83/tmp',
+		oncomplete: function(ret)
+		{
+			var redirect_params = $(ret).map(function(i, e) {
+				return "st=" + e.file_status + "&fn=" + e.file_code;
+			});
+			document.location = 'https://uploadhub.to/?op=upload_result&' + redirect_params.toArray().join('&');
+		}
+	});
+	$('.reurlupload .uploadbtn').click(function(evt)
+	{
+		evt.preventDefault();
+		if(!$('.reurlupload form').get(0).tos.checked)
+		{
+			alert("You must agree with TOS");
+			return;
+		}
+		urluploader.start(this.form.url_mass.value);
+	});
+
+	var uploader = new FileUploader('#uploadfile', { return_url: 'https://uploadhub.to/?op=upload_result&' });
+	var multiselector = new MultiSelector('#files_list', '#file_0',
+			{
+				file_public_default: '1',
+				ext_allowed: '',
+				ext_not_allowed: 'php|py|pl|cgi|html',
+				max_upload_files: '10',
+				max_upload_filesize: '10240',
+				oncomplete: function(files)
+				{
+					uploader.start(files);
+				}
+			});
+	$('.torrent input[type=file]').change(function()
+	{
+		$(this.form).submit();
+	});
+	$('#magnet').on('paste', function(evt) { setTimeout(function() { evt.target.form.submit() }, 0) });
+</script>
+
+<script>
+	var dropzone = document.getElementById('dropzone');
+	var dragndrop = new DragNDropHandler(dropzone, { multiselector: multiselector });
+	var ctr = 0;
+
+	document.body.addEventListener('dragenter', function() {
+		ctr++;
+		if(ctr > 0) $(dropzone).show();
+	});
+
+	document.body.addEventListener('dragleave', function() {
+		ctr--;
+		if(ctr <= 0) $(dropzone).hide();
+	});
+</script>
+
+
 </div>
 <style>
 .p-5 { padding: 3rem 0rem 0 0rem!important; }

@@ -1,0 +1,640 @@
+
+
+<style>
+
+body.admin-panel .tbl1 td, body.admin-panel .tbl1 th {
+    border: 1px solid #aebcde;
+    font-size: .8571428571428571rem;
+    padding: 5px;
+    line-height: 15px!important;
+}
+
+</style>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="UploadHub - Fast and Free File Hosting. Earn Money Uploading Files, No Files Deletion, Unlimited Bandwidth, Unlimited Storage, Unlimited File Size">
+    <meta name="keywords"    content="file upload,share files,free upload,File hosting, file sharing, file upload, free file sharing, upload files, large file transfer, upload file, send this file, free file hosting, online file storage, sending large files, send large files free, send files, big file transfer, free file transfer,file uploader,free file sharing site, free file upload, file upload site, file sharing free, mp3 upload, upload large files, file share website, upload a file, file hosting sites,free file storage, free upload site, upload files free, large file sharing, file share free,file storage online, online file storage free">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500&family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+    <script src="xfst_theme2/js/jquery-1.9.1.min.js"></script>
+
+    
+    <title>UploadHub - Easy way to share your files</title>
+    <link rel="icon" href="https://uploadhub.to/images/favicon.gif" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <script type="text/javascript" src="xfst_theme2/js/jquery.paging.js"></script>
+    <script type="text/javascript" src="xfst_theme2/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="xfst_theme2/js/paging.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#showallarch").click(function() {
+                $(this).css('display', 'none'),
+                    $("#fileinfoarch").css('height', '100%'),
+                    $("#grad").css('display', 'none');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        (function($) {
+            $(function() {
+
+                $('ul.tabs').on('click', 'li:not(.current)', function() {
+                    var section = $(this).parents('div.section:first');
+                    var idx = $(this).index();
+
+                    $(this).addClass('current').siblings().removeClass('current');
+                    $(section).find('> div.box').eq(idx).fadeIn(150).siblings('div.box').hide();
+                    $.cookie($(section).attr('id') + 'tab', idx);
+                });
+
+                $('.section').each(function(i, e) {
+                    if(!e.id) return;
+
+                    var idx;
+                    if(idx = $.cookie(e.id + 'tab'))
+                    {
+                        $(e).find('> ul > li').eq(idx).click();
+                    }
+                });
+
+            })
+        })(jQuery)
+    </script>
+    
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-146896007-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+    
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="xfst_theme2/css/style.min.css" />
+    
+</head>
+<body  >
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="xfst_theme2/img/logo.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fad fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-menu">
+            <button class="navbar-toggler position-absolute" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fad fa-times"></i>
+            </button>
+            <div class="navbar-nav ml-auto">
+                <!--<li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/?op=payments">Premium</a>
+                </li>-->
+                
+
+               <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+ <li class="nav-item">
+                    <a class="nav-link" href="index.html@op=upload_form">Upload</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html@op=make_money">Make Money</a>
+                </li>
+
+                 	<li class="nav-item">
+                    <a class="nav-link" href="index.html@op=payments">Premium</a>
+                	</li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="register.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item ml-lg-5 login">
+                        <a class="nav-link position-relative" href="login.html">Login</a>
+                    </li>
+
+
+                
+
+                
+                
+            </ul>
+        </div>
+    	</div>
+	</div>
+</nav>
+
+<div id="container">
+    <div class="container py-5 premium-page">
+	<div class="row">
+		<div class="col-md-12 text-left">
+			<h2 class="title"><span style="color:white;">UploadHub</span> Premium Plan</h2>
+			<h2 class="title_downloads">Upgrade your acccount to Premium to receive the best Benefits!</h2>
+			<h4 class="subtitle">From as little as <span>$3.99!</span></h4>
+
+		</div>
+
+		<div class="col-md-12 mt-5">
+					<p id="premBen">Premium Benefits below:</p>
+
+			<ul class="accBenfits">
+ 			     <li>Upload files upto 50GB in file size</li>
+                        <li>Unlimited Account Storage</li>
+ 			     <li>Inactive files will be deleted after 150 days</li>
+                        <li>Upload speeds will be increased</li>
+                        <li>Upload upto 200 files at once</li>
+                        <li>No download waiting/timers</li>
+     			     <li>Unlimited Download speeds</li>
+                        <li>24/7 Support</li>
+                    </ul>
+
+			<div class="plans-header d-flex flex-wrap align-items-center justify-content-between mb-4">
+				<div class="btn-group">
+					<a href="premium.html#days" data-toggle="days" class="toggle_plans active">Premium Plans</a>
+					<a href="premium.html#traffic" data-toggle="traffic" class="toggle_plans">Traffic Plans</a>
+
+				</div>
+			</div>
+
+
+			<link href="xfst_theme2/css/jquery-ui.css" rel="stylesheet"/>
+<script src="xfst_theme2/js/jquery-ui.js"></script>
+
+<ul class="m-0 p-0 flex-wrap plans-list" id="days" style="display: flex;">
+	
+		<li class="p-3" style="padding-right:0px!important; padding-left:0px!important; padding-bottom:0px!important;">
+			<div class="header text-center pb-3 mb-3" style="padding-bottom:0px!important;">
+				<div class="days">
+					7 Days
+				</div>
+				<div class="price">
+					$ 3.99
+				</div>
+			</div>
+			<ul class="prmList">
+				<li>Secure Payment</li>
+				<li>100% Safe and Secure</li>
+				<li>24/7 Support</li>
+				<li style="background:#58a3fd;">Payment Method</li>
+			</ul>
+			<div class="payments" style="float:left; width:100%; padding:1rem;">
+				
+					<a href="index.html@op=payments&amp;amount=3.99&amp;type=ccpay&amp;r=vqa293&amp;token=a58357fd8e60ebfcaddf064d0181186c" class="btn btn-primary btn-sm ask_email"><img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay"></a>
+				
+			</div>
+		</li>
+	
+		<li class="p-3" style="padding-right:0px!important; padding-left:0px!important; padding-bottom:0px!important;">
+			<div class="header text-center pb-3 mb-3" style="padding-bottom:0px!important;">
+				<div class="days">
+					30 Days
+				</div>
+				<div class="price">
+					$ 9.99
+				</div>
+			</div>
+			<ul class="prmList">
+				<li>Secure Payment</li>
+				<li>100% Safe and Secure</li>
+				<li>24/7 Support</li>
+				<li style="background:#58a3fd;">Payment Method</li>
+			</ul>
+			<div class="payments" style="float:left; width:100%; padding:1rem;">
+				
+					<a href="index.html@op=payments&amp;amount=9.99&amp;type=ccpay&amp;r=vqa293&amp;token=a58357fd8e60ebfcaddf064d0181186c" class="btn btn-primary btn-sm ask_email"><img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay"></a>
+				
+			</div>
+		</li>
+	
+		<li class="p-3" style="padding-right:0px!important; padding-left:0px!important; padding-bottom:0px!important;">
+			<div class="header text-center pb-3 mb-3" style="padding-bottom:0px!important;">
+				<div class="days">
+					120 Days
+				</div>
+				<div class="price">
+					$ 35.99
+				</div>
+			</div>
+			<ul class="prmList">
+				<li>Secure Payment</li>
+				<li>100% Safe and Secure</li>
+				<li>24/7 Support</li>
+				<li style="background:#58a3fd;">Payment Method</li>
+			</ul>
+			<div class="payments" style="float:left; width:100%; padding:1rem;">
+				
+					<a href="index.html@op=payments&amp;amount=35.99&amp;type=ccpay&amp;r=vqa293&amp;token=a58357fd8e60ebfcaddf064d0181186c" class="btn btn-primary btn-sm ask_email"><img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay"></a>
+				
+			</div>
+		</li>
+	
+		<li class="p-3" style="padding-right:0px!important; padding-left:0px!important; padding-bottom:0px!important;">
+			<div class="header text-center pb-3 mb-3" style="padding-bottom:0px!important;">
+				<div class="days">
+					365 Days
+				</div>
+				<div class="price">
+					$ 80
+				</div>
+			</div>
+			<ul class="prmList">
+				<li>Secure Payment</li>
+				<li>100% Safe and Secure</li>
+				<li>24/7 Support</li>
+				<li style="background:#58a3fd;">Payment Method</li>
+			</ul>
+			<div class="payments" style="float:left; width:100%; padding:1rem;">
+				
+					<a href="index.html@op=payments&amp;amount=80&amp;type=ccpay&amp;r=vqa293&amp;token=a58357fd8e60ebfcaddf064d0181186c" class="btn btn-primary btn-sm ask_email"><img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay"></a>
+				
+			</div>
+		</li>
+	
+</ul>
+
+
+	<ul class="m-0 p-0 flex-wrap plans-list" id="traffic" style="display: none">
+		
+			<li class="p-3">
+				<div class="header text-center pb-3 mb-3">
+					<div class="price">
+						<sup>$</sup>3.00
+					</div>
+					<div class="days">
+						10 GB
+					</div>
+				</div>
+				<ul id="trafficPlan">
+					<li>Secure Payment</li>
+					<li>100% Safe and Secure</li>
+					<li>24/7 Support</li>
+				</ul>
+				
+				<div class="payments" style="float:left; width:100%; padding:1rem;">
+					
+						<a href="index.html@op=payments&amp;amount=3.00&amp;type=ccpay&amp;r=vqa293&amp;target=premium_traffic&amp;token=a58357fd8e60ebfcaddf064d0181186c" 
+						 class="btn btn-primary btn-sm">
+						<img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay">
+						
+						</a>
+					
+				</div>
+			</li>
+		
+			<li class="p-3">
+				<div class="header text-center pb-3 mb-3">
+					<div class="price">
+						<sup>$</sup>9.00
+					</div>
+					<div class="days">
+						50 GB
+					</div>
+				</div>
+				<ul id="trafficPlan">
+					<li>Secure Payment</li>
+					<li>100% Safe and Secure</li>
+					<li>24/7 Support</li>
+				</ul>
+				
+				<div class="payments" style="float:left; width:100%; padding:1rem;">
+					
+						<a href="index.html@op=payments&amp;amount=9.00&amp;type=ccpay&amp;r=vqa293&amp;target=premium_traffic&amp;token=a58357fd8e60ebfcaddf064d0181186c" 
+						 class="btn btn-primary btn-sm">
+						<img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay">
+						
+						</a>
+					
+				</div>
+			</li>
+		
+			<li class="p-3">
+				<div class="header text-center pb-3 mb-3">
+					<div class="price">
+						<sup>$</sup>13.00
+					</div>
+					<div class="days">
+						100 GB
+					</div>
+				</div>
+				<ul id="trafficPlan">
+					<li>Secure Payment</li>
+					<li>100% Safe and Secure</li>
+					<li>24/7 Support</li>
+				</ul>
+				
+				<div class="payments" style="float:left; width:100%; padding:1rem;">
+					
+						<a href="index.html@op=payments&amp;amount=13.00&amp;type=ccpay&amp;r=vqa293&amp;target=premium_traffic&amp;token=a58357fd8e60ebfcaddf064d0181186c" 
+						 class="btn btn-primary btn-sm">
+						<img src="images/stripe.png" style="width:120px;height:auto" alt="ccpay">
+						
+						</a>
+					
+				</div>
+			</li>
+		
+	</ul>
+
+
+<style type="text/css">
+
+h2 {
+    text-align: center;
+}
+
+
+
+.col-md-12 {
+    background-color: #18334b !important;
+    padding: 10px;
+    border-radius: 6px;
+    color: white !important;
+}
+
+
+
+ul.ftr li {
+    list-style: none;
+    display: inline-table;
+    color: #ffffff;
+    background: #041c32;
+    padding: 2px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    background: #041c325c;
+}
+
+.pt10 p {
+    background-color: #041c32;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding-bottom: 265px;
+    background-color: #041C32;
+    min-height: 100%;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #3080e8;
+    color: white;
+}
+
+h6.subtitle {
+    color: #2f80e8;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    font-weight: 700;
+
+    text-align: center !important;
+}
+h4.subtitle {
+    background: #102b42;
+    display: inline-grid;
+    color: #3586ff;
+    margin-left: 440px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+    text-align: center;
+}
+
+.files-page .files .table tr.filerow, .premium-page .plans-list li, body.index-page {
+    background: #041c32;
+    border-top: 3px solid #3586ff;
+    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 10%);
+}
+
+
+.premium-page .plans-list li .header .price sup, .widget .price sup {
+    color: #ffffff;
+}
+
+
+.premium-page .plans-list li .payments .btn:last-of-type {
+    margin: 0;
+    border-radius: 4px;
+}
+
+
+
+#trafficPlan li {
+    border: 0px;
+    border-bottom: 2px solid #f6f6f6;
+    float: left!important;
+    width: 83%!important;
+    list-style: none;
+    text-align: center;
+    font-weight: bold;
+    border-top: 0px solid #58a3fd!important;
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 10%)!important;
+    padding-top: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    margin-bottom: 0px!important;}
+
+
+.premium-page .plans-list{margin-bottom:3rem!important;}
+</style>
+
+	
+		</div>
+
+
+	</div>
+
+
+
+</div>
+
+
+
+<style>
+
+
+
+h4.subtitle span {
+    color: #709aee;
+    font-size: .95rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 19px;
+}
+h2.title {
+    color: #3080e8;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+ul.accBenfits li {
+    background: #041c32;
+    padding: 5px;
+    border-top: 3px solid #3586ff;
+    box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 10%);
+}
+
+
+p#premBen {
+    text-align: center;
+    font-size: 20px;
+    color: #3586ff;
+    font-weight: 600;
+}
+
+ul.accBenfits li {
+    background-color: #041c32!important;
+    margin: 4px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    width: 33%;
+    display: inline-block;
+}
+
+ul.accBenfits {
+    font-size: 15px;
+    list-style: none;
+    position: inherit;
+    text-align: center;
+}
+
+ul.accBenfits li {
+    background: #041c32;
+    padding: 5px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif !important;
+
+
+}
+
+</style>
+</div>
+<style>
+.p-5 { padding: 3rem 0rem 0 0rem!important; }
+</style>
+<footer class="footer p-5 position-absolute">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4>UploadHub</h4>
+                <ul class="menu p-0 m-0">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html@op=news">News</a>
+                    </li>
+                </ul>
+            </div>
+			<div class="col-sm-3">
+                <h4>Features</h4>
+                <ul class="menu p-0 m-0">
+                    <li>
+                        <a href="premium.html">Premium</a>
+                    </li>
+                    <li>
+                        <a href="make_money.html">Make Money</a>
+                    </li>
+                    <li>
+                        <a href="index.html@op=check_files">Check Files</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h4>Support</h4>
+                <ul class="menu p-0 m-0">
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h4>Legal & Policy</h4>
+                <ul class="menu p-0 m-0">
+                    <li>
+                        <a href="tos.html">Terms Of Service</a>
+                    </li>                
+		</ul>
+            </div>
+        </div>
+    </div>
+	<div class="copyright">
+		&copy;2023 <a href="index.html">UploadHub</a>. All rights reserved.
+	</div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="xfst_theme2/js/bootstrap.min.js" ></script>
+<script src="xfst_theme2/js/clipboard.min.js" ></script>
+<script src="xfst_theme2/js/main.js" ></script>
+<script src="xfst_theme2/js/script.js" ></script>
+</body>
+</html>
+
+<style>
+.navbar {
+    background: #3586ff;
+}
+.footer {
+    background: #282f3d;
+}
+.footer h4 {
+    color: white;
+    margin: 0 0 15px;
+}
+
+#vid_play {
+    left: 50% !important;
+}
+
+
+</style>
